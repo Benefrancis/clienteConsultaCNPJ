@@ -9,9 +9,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 /**
- * @author Benefrancis do Nascimento
+ * @author <a href="https://github.com/Benefrancis">Benefrancis do Nascimento</a>
+ * <br />
  * Fonte da API: https://brasilapi.com.br/docs#tag/CNPJ/paths/~1cnpj~1v1~1{cnpj}/get
  * @see <a href="https://github.com/SavioAndres/BrasilAPI-Java">BrasilAPI-Java</a>
+ * @see <a href="https://github.com/Benefrancis/clienteConsultaCNPJ.git">Projeto no Github</a>
  */
 public class Main {
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
@@ -34,6 +36,7 @@ public class Main {
 
         //Será que tem Suporte ao HTTP 2?
         System.out.println(response.version());
+
         //Olha o JSON
         System.out.println(response.body());
 
