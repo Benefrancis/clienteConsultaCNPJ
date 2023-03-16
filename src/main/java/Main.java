@@ -20,13 +20,11 @@ public class Main {
 
         String cnpj = "63002141000163"; //"26989715005414"; //"11319526000155";  // "19131243000197";
 
-        URI uri = new URI("https://brasilapi.com.br/api/cnpj/v1/" + cnpj);
+        var uri = new URI("https://brasilapi.com.br/api/cnpj/v1/" + cnpj);
 
-        HttpClient cliente = HttpClient.newHttpClient();
+        var cliente = HttpClient.newHttpClient();
 
-        HttpRequest request = (HttpRequest) HttpRequest
-                .newBuilder(uri)
-                .GET().build();
+        var request = HttpRequest.newBuilder(uri).GET().build();
 
         HttpResponse<String> response = cliente.send(request, HttpResponse.BodyHandlers.ofString());
 
