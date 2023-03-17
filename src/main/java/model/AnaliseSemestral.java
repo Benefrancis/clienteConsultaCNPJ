@@ -1,0 +1,37 @@
+package model;
+
+public record AnaliseSemestral(
+        String regiao,
+        String uf,
+        String regional_saude,
+        String municipio,
+        String codigo_municipio,
+        String tipo_instituicao,
+        String sigla_instituicao,
+        String instituicao,
+        String cnpj_instituicao,
+        String escritorio_regional_local,
+        String cnpj_escritorio_regional_local,
+        String tipo_forma_abastecimento,
+        String numero_forma_abastecimento,
+        String forma_abastecimento,
+        String estacao_ou_unidade_tratamento_agua,
+        Integer ano_referencia,
+        Integer semestre_referencia,
+        String data_registro_sisagua,
+        String data_relatorio_semestral,
+        String data_coleta,
+        String data_analise,
+        String ponto_monitoramento,
+        String codigo_grupo_parametro,
+        String parametro,
+        Double valor_limite_deteccao,
+        Double valor_limite_quantificacao,
+        Double resultado,
+        Integer codigo_instituicao,
+        Integer codigo_tipo_abastecimento,
+        Integer codigo_tipo_ponto_coleta,
+        Integer codigo_tipo_analise,
+        Integer codigo_tipo_categoria_analise) {
+
+}
