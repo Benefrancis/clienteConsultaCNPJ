@@ -7,6 +7,8 @@
     <groupId>groupId</groupId>
     <artifactId>clienteAPI</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>cliente-api</name>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>

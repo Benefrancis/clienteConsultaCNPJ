@@ -11,6 +11,13 @@ import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author <a href="https://github.com/Benefrancis">Benefrancis do Nascimento</a>
+ * <br />
+ * Fonte da API: https://apidadosabertos.saude.gov.br/sisagua/controle-semestral?limit=100&offset=1
+ *
+ * @see <a href="https://github.com/Benefrancis/clienteConsultaCNPJ.git">Projeto no Github</a>
+ */
 public class SisAgua {
 
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
