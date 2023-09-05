@@ -9,8 +9,5 @@
         <module name="clienteAPI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="clienteAPI" target="18" />
-    </bytecodeTargetLevel>
   </component>
 </project>

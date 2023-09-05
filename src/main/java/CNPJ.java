@@ -20,30 +20,32 @@ public class CNPJ {
 
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
 
-        String cnpj = "40526763000195"; //"63002141000163"; //"26989715005414"; //"11319526000155";  // "19131243000197";
 
-        var uri = new URI("https://brasilapi.com.br/api/cnpj/v1/" + cnpj);
+        /// CNPJ aleatórios que encontrei na internet
+        String cnpj = "46830089000114"; // ""11164743000113"; // "43901921000138";  // "40526763000195"; //"63002141000163"; //"26989715005414"; //"11319526000155";  // "19131243000197";
+
+        var uri = new URI( "https://brasilapi.com.br/api/cnpj/v1/" + cnpj );
 
         var cliente = HttpClient.newHttpClient();
 
-        var request = HttpRequest.newBuilder(uri).GET().build();
+        var request = HttpRequest.newBuilder( uri ).GET().build();
 
-        HttpResponse<String> response = cliente.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = cliente.send( request, HttpResponse.BodyHandlers.ofString() );
 
         if (response.statusCode() != 200) {
-            throw new RuntimeException("HTTP error code : " + response.statusCode());
+            throw new RuntimeException( "HTTP error code : " + response.statusCode() );
         }
 
         //Será que tem Suporte ao HTTP 2?
-        System.out.println(response.version());
+        System.out.println( response.version() );
 
         //Olha o JSON
-        System.out.println(response.body());
+        System.out.println( response.body() );
 
         //Colocando num Objeto Imutável:
-        Empresa empresa = new Gson().fromJson(response.body(), Empresa.class);
+        Empresa empresa = new Gson().fromJson( response.body(), Empresa.class );
 
-        System.out.println(empresa);
+        System.out.println( empresa );
 
 
     }
